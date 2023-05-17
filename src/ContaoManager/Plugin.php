@@ -1,11 +1,11 @@
 <?php
 
 declare(strict_types=1);
-
 /*
- * This file is part of [package name].
+ * This file is part of the Contao BAG Freigabe Bundle.
  *
- * (c) John Doe
+ * (c) 2023, connect2Net webServices
+ * stefan.meise@connect2net.de
  *
  * @license LGPL-3.0-or-later
  */
@@ -24,7 +24,7 @@ class Plugin implements BundlePluginInterface
     {
         return [
             BundleConfig::create(ContaoBagFreigabeBundle::class)
-                ->setLoadAfter([ContaoBagFreigabeBundle::class]),
+                ->setLoadAfter([ContaoCoreBundle::class]),
         ];
     }
 }

@@ -11,30 +11,25 @@
             "homepage": "https://github.com/con2net"
         }
     ],
-    "support": {
-        "email": "info@connect2net.de",
-        "issues": "https://github.com/con2net/contao-bag-freigabe-bundle/issues",
-        "source": "https://github.com/con2net/contao-bag-freigabe-bundle"
-    },
     "require": {
         "php": "^7.4 || ^8.0",
         "contao/core-bundle": "^4.13"
     },
     "conflict": {
+		"contao/core": "*",
         "contao/manager-plugin": "<2.0 || >=3.0"
+   },
+    "extra": {
+        "contao-manager-plugin": "con2net\\ContaoBagFreigabeBundle\\ContaoManager\\Plugin"
     },
     "autoload": {
         "psr-4": {
             "con2net\\ContaoBagFreigabeBundle\\": "src/"
         }
     },
-    "config": {
-        "allow-plugins": {
-            "contao-components/installer": true,
-            "contao/manager-plugin": true
-        }
-    },
-    "extra": {
-        "contao-manager-plugin": "con2net\\ContaoBagFreigabeBundle\\ContaoManager\\Plugin"
+    "support": {
+        "email": "info@connect2net.de",
+        "issues": "https://github.com/con2net/contao-bag-freigabe-bundle/issues",
+        "source": "https://github.com/con2net/contao-bag-freigabe-bundle"
     }
 }
