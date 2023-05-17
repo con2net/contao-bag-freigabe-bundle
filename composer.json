@@ -1,0 +1,60 @@
+{
+    "name": "con2net/contao-bag-freigabe-bundle",
+    "description": "Staging Verfahren mit Änderungsarchivierung für BAG",
+    "license": "LGPL-3.0-or-later",
+    "type": "contao-bundle",
+    "authors": [
+        {
+            "name": "connect2Net webServices",
+            "email": "info@connect2net.de",
+            "role": "Developer",
+            "homepage": "https://github.com/con2net"
+        }
+    ],
+    "support": {
+        "email": "info@connect2net.de",
+        "issues": "https://github.com/con2net/contao-bag-freigabe-bundle/issues",
+        "source": "https://github.com/con2net/contao-bag-freigabe-bundle"
+    },
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "contao/core-bundle": "^4.13"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0",
+        "phpunit/phpunit": "^9.5",
+        "symfony/phpunit-bridge": "^6.1"
+    },
+    "conflict": {
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "con2net\\ContaoBagFreigabeBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "con2net\\ContaoBagFreigabeBundle\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "contao-components/installer": true,
+            "contao/manager-plugin": true
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "con2net\\ContaoBagFreigabeBundle\\ContaoManager\\Plugin"
+    },
+    "scripts": {
+        "all": [
+            "@unit-tests",
+            "@ecs",
+            "@phpstan"
+        ],
+        "ecs": "@php tools/ecs/vendor/bin/ecs check src tests --config ecs.php --fix --ansi",
+        "phpstan": "@php tools/phpstan/vendor/bin/phpstan analyze --ansi",
+        "unit-tests": "@php vendor/bin/phpunit --colors=always"
+    }
+}
